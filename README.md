@@ -1,6 +1,21 @@
 # Generiz Virtual Display Manager
+Descripción del repositorio:
 
-Generiz Virtual Display Manager es una herramienta para gestionar y mantener actualizado un display virtual en sistemas Windows. Esta utilidad crea un display virtual con un driver específico y lo reinstala cada vez que se reinicia el sistema. Es útil para solucionar problemas de visualización en aplicaciones como AnyDesk cuando no hay un monitor conectado a la computadora que se desea controlar.
+Este repositorio contiene una solución para abordar el problema de AnyDesk donde no se muestra el escritorio remoto cuando la computadora controlada no tiene un monitor conectado. La solución crea un "display virtual" en la computadora que se controla, permitiendo así que AnyDesk muestre correctamente el escritorio remoto.
+
+La solución está diseñada para funcionar en Windows 10 y utiliza PowerShell para implementar la funcionalidad. El script también incluye una tarea programada para garantizar que el "display virtual" se vuelva a instalar automáticamente después de reiniciar AnyDesk.
+
+Estructura del repositorio:
+raíz
+│   ejecutar.bat
+│
+└───carpeta_datos
+    │   solucion.ps1
+    │
+    └───carpeta
+        │   (archivos y subcarpetas)
+        
+Nota: Este proyecto está diseñado en y para Windows 11 tambien deberia de funcionar en Windows 10. Asegúrese de probar la solución en una máquina con Windows 10 antes de usarla en un entorno de producción.
 
 ## Instalación
 
