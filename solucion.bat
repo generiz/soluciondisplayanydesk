@@ -3,7 +3,18 @@ TITLE Powered by generiz
 color 80
 
 IF EXIST "c:\generiz\" (
-    echo "generiz ya está instalado."
+    echo "Ya está instalado."
+    echo ¿Desea eliminar el programa y todas las tareas asociadas? (S/N)
+    set /p userChoice=
+    if /i %userChoice% equ S (
+        echo Eliminando tarea programada...
+        schtasks /delete /tn generiz /f
+        echo Eliminando directorio generiz...
+        RMDIR /S /Q c:\generiz\
+        echo generiz y las tareas asociadas han sido eliminadas.
+        pause
+        exit
+    )
 ) ELSE (
     MKDIR c:\generiz
     MOVE carpeta\Win32 c:\generiz\
@@ -35,3 +46,4 @@ echo.
 color 80
 
 pause
+
